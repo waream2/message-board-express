@@ -20,11 +20,11 @@ router.get('/', function(req, res, next) {
 });
 
 // Creates form endpoint
-router.get('/new', function(req, res, next){
+router.get('/news', function(req, res, next){
   res.render('form', { title: 'Add a Message'})
 })
 
-router.post('/new', function(req, res, next){
+router.post('/news', function(req, res, next){
   messages.push({user: req.body.user, text: req.body.message, added: new Date()})
   res.redirect('/')
 })
