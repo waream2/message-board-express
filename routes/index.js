@@ -19,6 +19,7 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: 'Mini Messageboard', messages: messages });
 });
 
+// Creates form endpoint
 router.get('/new', function(req, res, next){
   res.render('form', { title: 'Add a Message'})
 })
@@ -28,4 +29,4 @@ router.post('/new', function(req, res, next){
   res.redirect('/')
 })
 
-module.exports = router;
+module.exports = router
