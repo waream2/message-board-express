@@ -1,0 +1,10 @@
+extends layout
+
+block content
+  p= title
+    form(action="/new" method="POST")
+      p User:
+      input(type="text" name="user" placeholder="")
+      p Message:
+      input(type="text" name="message" placeholder="")
+      input(type="submit")
